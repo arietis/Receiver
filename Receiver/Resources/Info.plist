@@ -37,5 +37,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app uses location info to find iBeacons near you!</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app uses location info to find iBeacons near you!</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app uses location info to find iBeacons near you!</string>
 </dict>
 </plist>
