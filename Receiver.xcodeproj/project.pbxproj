@@ -142,13 +142,13 @@
 		03264C851FA7D45400477444 /* Receiver */ = {
 			isa = PBXGroup;
 			children = (
-				033E07F11FAA20490057E489 /* Views */,
 				03F560A91FA88D4B00544A08 /* Controllers */,
 				0395308F1FA8938C00821326 /* Extensions */,
 				03F560AA1FA88D5F00544A08 /* Misc */,
 				039530981FA8B57100821326 /* Models */,
 				03F560AB1FA88D7800544A08 /* Resources */,
 				03DCA41C1FA8BFAA00E1334D /* View Models */,
+				033E07F11FAA20490057E489 /* Views */,
 			);
 			path = Receiver;
 			sourceTree = "<group>";
@@ -211,11 +211,11 @@
 			children = (
 				03264C8A1FA7D45400477444 /* LockViewController.storyboard */,
 				03264C881FA7D45400477444 /* LockViewController.swift */,
+				030C11E61FAB8E1B00CE09A1 /* ProfileViewController.storyboard */,
+				030C11E41FAB8E0400CE09A1 /* ProfileViewController.swift */,
+				03CADC0E1FACE1FD00EC8F15 /* SplashViewController.swift */,
 				033E07ED1FA9F5400057E489 /* TabBarController.storyboard */,
 				033E07EF1FA9F5BB0057E489 /* TabBarController.swift */,
-				030C11E41FAB8E0400CE09A1 /* ProfileViewController.swift */,
-				030C11E61FAB8E1B00CE09A1 /* ProfileViewController.storyboard */,
-				03CADC0E1FACE1FD00EC8F15 /* SplashViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

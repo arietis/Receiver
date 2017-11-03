@@ -10,14 +10,15 @@ import Foundation
 
 class ViewModel {
     let lock = LockManager()
-    
+
     // MARK: Public Interface
-    
+
     func startTrackingBeacons() {
         lock.startRanging()
     }
-    
+
     func stopTrackingBeacons() {
         lock.stopRanging()
     }
+
 }

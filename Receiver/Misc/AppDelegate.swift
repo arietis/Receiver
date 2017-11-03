@@ -11,11 +11,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
+    // MARK: Application Delegate
+
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        
+
         let rootViewController = TabBarController.instance()
         rootViewController.viewControllers = [
             LockViewController.instance(),
@@ -26,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
-    
+
     func applicationDidBecomeActive(_ application: UIApplication) {
         window?.rootViewController?.present(SplashViewController(), animated: false, completion: nil)
     }
