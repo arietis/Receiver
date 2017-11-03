@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030C11E51FAB8E0400CE09A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C11E41FAB8E0400CE09A1 /* ProfileViewController.swift */; };
+		030C11E71FAB8E1B00CE09A1 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030C11E61FAB8E1B00CE09A1 /* ProfileViewController.storyboard */; };
 		03264C871FA7D45400477444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03264C861FA7D45400477444 /* AppDelegate.swift */; };
-		03264C891FA7D45400477444 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03264C881FA7D45400477444 /* ViewController.swift */; };
-		03264C8C1FA7D45400477444 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03264C8A1FA7D45400477444 /* ViewController.storyboard */; };
+		03264C891FA7D45400477444 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03264C881FA7D45400477444 /* LockViewController.swift */; };
+		03264C8C1FA7D45400477444 /* LockViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03264C8A1FA7D45400477444 /* LockViewController.storyboard */; };
 		03264C8E1FA7D45400477444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03264C8D1FA7D45400477444 /* Assets.xcassets */; };
 		03264C911FA7D45400477444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03264C8F1FA7D45400477444 /* LaunchScreen.storyboard */; };
 		03264C9C1FA7D45400477444 /* ReceiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03264C9B1FA7D45400477444 /* ReceiverTests.swift */; };
 		03264CA71FA7D45400477444 /* ReceiverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03264CA61FA7D45400477444 /* ReceiverUITests.swift */; };
+		033E07EE1FA9F5400057E489 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033E07ED1FA9F5400057E489 /* TabBarController.storyboard */; };
+		033E07F01FA9F5BB0057E489 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E07EF1FA9F5BB0057E489 /* TabBarController.swift */; };
+		033E07F31FAA20640057E489 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E07F21FAA20640057E489 /* ArcView.swift */; };
 		039530911FA893A200821326 /* UIViewController+Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039530901FA893A200821326 /* UIViewController+Receiver.swift */; };
 		039530931FA89B1F00821326 /* UIStoryboard+Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039530921FA89B1F00821326 /* UIStoryboard+Receiver.swift */; };
 		039530951FA89BA200821326 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039530941FA89BA200821326 /* main.swift */; };
 		039530971FA89C1600821326 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039530961FA89C1600821326 /* TestingAppDelegate.swift */; };
 		0395309A1FA8B58F00821326 /* LockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039530991FA8B58F00821326 /* LockManager.swift */; };
 		0395309C1FA8B59900821326 /* LockSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395309B1FA8B59900821326 /* LockSpec.swift */; };
+		03CADC0F1FACE1FD00EC8F15 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CADC0E1FACE1FD00EC8F15 /* SplashViewController.swift */; };
 		03DCA41E1FA8BFB800E1334D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DCA41D1FA8BFB800E1334D /* ViewModel.swift */; };
 		03DCA4201FA8C4E600E1334D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DCA41F1FA8C4E600E1334D /* Constants.swift */; };
 		0649232AB415FDC7C4162467 /* Pods_ReceiverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7C9C4309F5DB195956ADB5 /* Pods_ReceiverUITests.framework */; };
@@ -45,10 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		030C11E41FAB8E0400CE09A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		030C11E61FAB8E1B00CE09A1 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		03264C831FA7D45400477444 /* Receiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Receiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03264C861FA7D45400477444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03264C881FA7D45400477444 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		03264C8B1FA7D45400477444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ViewController.storyboard; sourceTree = "<group>"; };
+		03264C881FA7D45400477444 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
+		03264C8B1FA7D45400477444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LockViewController.storyboard; sourceTree = "<group>"; };
 		03264C8D1FA7D45400477444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03264C901FA7D45400477444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03264C921FA7D45400477444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,12 +66,16 @@
 		03264CA21FA7D45400477444 /* ReceiverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03264CA61FA7D45400477444 /* ReceiverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverUITests.swift; sourceTree = "<group>"; };
 		03264CA81FA7D45400477444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		033E07ED1FA9F5400057E489 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		033E07EF1FA9F5BB0057E489 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		033E07F21FAA20640057E489 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
 		039530901FA893A200821326 /* UIViewController+Receiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Receiver.swift"; sourceTree = "<group>"; };
 		039530921FA89B1F00821326 /* UIStoryboard+Receiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Receiver.swift"; sourceTree = "<group>"; };
 		039530941FA89BA200821326 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		039530961FA89C1600821326 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		039530991FA8B58F00821326 /* LockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockManager.swift; sourceTree = "<group>"; };
 		0395309B1FA8B59900821326 /* LockSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockSpec.swift; sourceTree = "<group>"; };
+		03CADC0E1FACE1FD00EC8F15 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		03DCA41D1FA8BFB800E1334D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		03DCA41F1FA8C4E600E1334D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0442FF03779136AC5FB19D44 /* Pods-ReceiverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiverUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiverUITests/Pods-ReceiverUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +142,7 @@
 		03264C851FA7D45400477444 /* Receiver */ = {
 			isa = PBXGroup;
 			children = (
+				033E07F11FAA20490057E489 /* Views */,
 				03F560A91FA88D4B00544A08 /* Controllers */,
 				0395308F1FA8938C00821326 /* Extensions */,
 				03F560AA1FA88D5F00544A08 /* Misc */,
@@ -160,6 +173,14 @@
 			path = ReceiverUITests;
 			sourceTree = "<group>";
 		};
+		033E07F11FAA20490057E489 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				033E07F21FAA20640057E489 /* ArcView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0395308F1FA8938C00821326 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,8 +209,13 @@
 		03F560A91FA88D4B00544A08 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				03264C8A1FA7D45400477444 /* ViewController.storyboard */,
-				03264C881FA7D45400477444 /* ViewController.swift */,
+				03264C8A1FA7D45400477444 /* LockViewController.storyboard */,
+				03264C881FA7D45400477444 /* LockViewController.swift */,
+				033E07ED1FA9F5400057E489 /* TabBarController.storyboard */,
+				033E07EF1FA9F5BB0057E489 /* TabBarController.swift */,
+				030C11E41FAB8E0400CE09A1 /* ProfileViewController.swift */,
+				030C11E61FAB8E1B00CE09A1 /* ProfileViewController.storyboard */,
+				03CADC0E1FACE1FD00EC8F15 /* SplashViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -355,7 +381,9 @@
 			files = (
 				03264C911FA7D45400477444 /* LaunchScreen.storyboard in Resources */,
 				03264C8E1FA7D45400477444 /* Assets.xcassets in Resources */,
-				03264C8C1FA7D45400477444 /* ViewController.storyboard in Resources */,
+				033E07EE1FA9F5400057E489 /* TabBarController.storyboard in Resources */,
+				030C11E71FAB8E1B00CE09A1 /* ProfileViewController.storyboard in Resources */,
+				03264C8C1FA7D45400477444 /* LockViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,10 +565,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03264C891FA7D45400477444 /* ViewController.swift in Sources */,
+				03264C891FA7D45400477444 /* LockViewController.swift in Sources */,
+				033E07F31FAA20640057E489 /* ArcView.swift in Sources */,
 				039530951FA89BA200821326 /* main.swift in Sources */,
+				03CADC0F1FACE1FD00EC8F15 /* SplashViewController.swift in Sources */,
 				039530931FA89B1F00821326 /* UIStoryboard+Receiver.swift in Sources */,
+				033E07F01FA9F5BB0057E489 /* TabBarController.swift in Sources */,
 				03264C871FA7D45400477444 /* AppDelegate.swift in Sources */,
+				030C11E51FAB8E0400CE09A1 /* ProfileViewController.swift in Sources */,
 				0395309A1FA8B58F00821326 /* LockManager.swift in Sources */,
 				039530911FA893A200821326 /* UIViewController+Receiver.swift in Sources */,
 				03DCA41E1FA8BFB800E1334D /* ViewModel.swift in Sources */,
@@ -582,12 +614,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		03264C8A1FA7D45400477444 /* ViewController.storyboard */ = {
+		03264C8A1FA7D45400477444 /* LockViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				03264C8B1FA7D45400477444 /* Base */,
 			);
-			name = ViewController.storyboard;
+			name = LockViewController.storyboard;
 			path = .;
 			sourceTree = "<group>";
 		};

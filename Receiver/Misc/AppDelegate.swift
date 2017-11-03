@@ -15,10 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        window?.rootViewController = ViewController.instance()
+        
+        let rootViewController = TabBarController.instance()
+        rootViewController.viewControllers = [
+            LockViewController.instance(),
+            UINavigationController(rootViewController: ProfileViewController.instance())
+        ]
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
 
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        window?.rootViewController?.present(SplashViewController(), animated: false, completion: nil)
     }
 
 }

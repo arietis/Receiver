@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lock Access-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Lock Access" id="BYZ-38-t0r" customClass="LockViewController" customModule="Receiver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vj-0q-pRx" customClass="ArcView" customModule="Receiver" customModuleProvider="target">
+                                <rect key="frame" x="119.5" y="192.5" width="162" height="92"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="AIS-t7-5X9"/>
+                                    <constraint firstAttribute="width" constant="162" id="iTg-M0-kvJ"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iw4-fO-t4S">
+                                <rect key="frame" x="104" y="236.5" width="112" height="95"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xR-np-vhc">
+                                        <rect key="frame" x="43" y="43" width="26" height="13"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="26" id="iqL-29-cgR"/>
+                                            <constraint firstAttribute="height" constant="13" id="y7a-Dm-N2X"/>
+                                        </constraints>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-T5-RIA">
+                                        <rect key="frame" x="43" y="41.5" width="16" height="16"/>
+                                        <color key="backgroundColor" red="1" green="0.38431372549999998" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="FJv-kA-GNE"/>
+                                            <constraint firstAttribute="height" constant="16" id="RhX-Rr-9TS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.38431372549999998" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="RwY-T5-RIA" firstAttribute="centerY" secondItem="1xR-np-vhc" secondAttribute="centerY" id="Aja-yK-Pd3"/>
+                                    <constraint firstAttribute="width" constant="112" id="Cht-r9-wTg"/>
+                                    <constraint firstItem="1xR-np-vhc" firstAttribute="centerY" secondItem="iw4-fO-t4S" secondAttribute="centerY" constant="2" id="NPz-ne-fkb"/>
+                                    <constraint firstAttribute="height" constant="95" id="Zmo-WI-9ZJ"/>
+                                    <constraint firstItem="RwY-T5-RIA" firstAttribute="leading" secondItem="1xR-np-vhc" secondAttribute="leading" id="gFZ-vz-fUf"/>
+                                    <constraint firstItem="1xR-np-vhc" firstAttribute="centerX" secondItem="iw4-fO-t4S" secondAttribute="centerX" id="kdu-9b-R37"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.38431372549999998" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iw4-fO-t4S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3i0-ei-lQa"/>
+                            <constraint firstItem="iw4-fO-t4S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7yD-O8-TbI"/>
+                            <constraint firstItem="4Vj-0q-pRx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="40.5" id="SGb-3i-BXx"/>
+                            <constraint firstItem="iw4-fO-t4S" firstAttribute="centerY" secondItem="4Vj-0q-pRx" secondAttribute="centerY" constant="45.5" id="uI7-AC-Rcu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="arcView" destination="4Vj-0q-pRx" id="HZl-vj-xkg"/>
+                        <outlet property="holeView" destination="1xR-np-vhc" id="efH-PB-g8a"/>
+                        <outlet property="lockView" destination="iw4-fO-t4S" id="kVQ-ul-J88"/>
+                        <outlet property="triggerView" destination="RwY-T5-RIA" id="k7l-8b-OKb"/>
+                        <outlet property="triggerViewX" destination="gFZ-vz-fUf" id="q9f-ld-r6h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
