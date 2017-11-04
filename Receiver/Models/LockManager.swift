@@ -23,13 +23,15 @@ class LockManager: NSObject {
     private(set) var lockBeacon: CLBeacon?
     private(set) var isUnlocked = false {
         didSet {
-            if isUnlocked {
-                // TODO: implement UI
-                print("Unlocked!")
+            guard isUnlocked != oldValue else { return }
+
+            DispatchQueue.main.async { [weak self] in
+                self?.updateLockStatus?()
             }
         }
     }
     private(set) var timer: DispatchSourceTimer?
+    var updateLockStatus: (() -> Void)?
 
     // MARK: Public Interface
 
@@ -121,6 +123,7 @@ class LockManager: NSObject {
         timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.global(qos: .`default`))
         timer?.schedule(deadline: .now(), repeating: .seconds(4))
         timer?.setEventHandler(handler: { [weak self] in
+            self?.isUnlocked = false
             self?.accessLock()
         })
         timer?.resume()

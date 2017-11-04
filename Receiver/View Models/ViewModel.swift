@@ -9,7 +9,15 @@
 import Foundation
 
 class ViewModel {
+    var isLockUnlocked: Bool {
+        return lock.isUnlocked
+    }
     let lock = LockManager()
+    var updateLockStatus: (() -> Void)? {
+        didSet {
+            lock.updateLockStatus = updateLockStatus
+        }
+    }
 
     // MARK: Public Interface
 
