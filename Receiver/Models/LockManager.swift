@@ -17,7 +17,11 @@ class LockManager: NSObject {
             return nil
         }
 
-        return CLBeaconRegion(proximityUUID: uuid, major: 0, minor: 0, identifier: Constants.beaconName)
+        let beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 0, minor: 0, identifier: Constants.beaconName)
+        beaconRegion.notifyOnEntry = true
+        beaconRegion.notifyOnExit = true
+
+        return beaconRegion
     }
     let locationManager = CLLocationManager()
     private(set) var lockBeacon: CLBeacon?
@@ -43,23 +47,17 @@ class LockManager: NSObject {
 
     func startRanging() {
         guard let info = beaconInfo else {
-            print("Could not start ranging of CLBeaconRegion because of missing beacon info.")
+            print("Could not start/stop ranging of CLBeaconRegion because of missing beacon info.")
 
             return
         }
 
-        locationManager.startRangingBeacons(in: info)
+        locationManager.startMonitoring(for: info)
+        locationManager.startUpdatingLocation()
         scheduleNetworkRequest()
     }
 
     func stopRanging() {
-        guard let info = beaconInfo else {
-            print("Could not stop ranging of CLBeaconRegion because of missing beacon info.")
-
-            return
-        }
-
-        locationManager.stopRangingBeacons(in: info)
         timer?.cancel()
         timer = nil
         lockBeacon = nil
@@ -130,13 +128,38 @@ class LockManager: NSObject {
     }
 
     private func setup() {
+        locationManager.allowsBackgroundLocationUpdates = true
         locationManager.delegate = self
+        locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.requestAlwaysAuthorization()
     }
 
 }
 
 extension LockManager: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        guard let info = beaconInfo else {
+            print("Could not start/stop ranging of CLBeaconRegion because of missing beacon info.")
+
+            return
+        }
+
+        switch state {
+        case .inside:
+            locationManager.startRangingBeacons(in: info)
+        case .outside, .unknown:
+            locationManager.stopRangingBeacons(in: info)
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        locationManager.requestState(for: region)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
 
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         guard let beacon = beacons.first(where: { $0.proximityUUID.uuidString == Constants.beaconUUID }) else {
@@ -146,6 +169,14 @@ extension LockManager: CLLocationManagerDelegate {
         }
 
         lockBeacon = beacon
+    }
+
+    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
+        manager.requestState(for: region)
+    }
+
+    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
+        print(error.localizedDescription)
     }
 
     func locationManager(

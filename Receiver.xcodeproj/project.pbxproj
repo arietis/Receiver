@@ -344,6 +344,11 @@
 					03264C821FA7D45400477444 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					03264C961FA7D45400477444 = {
 						CreatedOnToolsVersion = 9.0.1;
