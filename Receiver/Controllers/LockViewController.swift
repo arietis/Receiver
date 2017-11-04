@@ -50,18 +50,7 @@ class LockViewController: UIViewController {
             if weakSelf.viewModel.isLockUnlocked {
                 weakSelf.anim()
             } else {
-                UIView.animate(
-                    withDuration: 1.0,
-                    delay: 1.0,
-                    usingSpringWithDamping: 0.5,
-                    initialSpringVelocity: 0.5,
-                    options: [],
-                    animations: { [weak self] in
-                        self?.arcView.transform = .identity
-                        self?.triggerView.backgroundColor = self?.view.backgroundColor
-                        self?.triggerViewX.constant = 0.0
-                        self?.view.layoutIfNeeded()
-                    }, completion: nil)
+                weakSelf.animReverse()
             }
         }
         viewModel.startTrackingBeacons()
@@ -73,16 +62,75 @@ class LockViewController: UIViewController {
         arcView.transform = .identity
         UIView.animate(
             withDuration: 1.0,
-            delay: 1.0,
+            delay: 0.0,
             usingSpringWithDamping: 0.5,
             initialSpringVelocity: 0.5,
             options: [],
             animations: { [weak self] in
-            self?.arcView.transform = CGAffineTransform(rotationAngle: 0.25 * .pi)
-            self?.triggerView.backgroundColor = .white
-            self?.triggerViewX.constant = 10.0
-            self?.view.layoutIfNeeded()
-        }, completion: nil)
+                self?.arcView.transform = CGAffineTransform(rotationAngle: 0.25 * .pi)
+                self?.triggerView.backgroundColor = .white
+                self?.triggerViewX.constant = 10.0
+                self?.view.layoutIfNeeded()
+            },
+            completion: nil)
+        UIView.animate(
+            withDuration: 0.25,
+            delay: 0.0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 0.5,
+            options: [],
+            animations: { [weak self] in
+                self?.triggerView.transform = CGAffineTransform(scaleX: 1.2, y: 1.0)
+            },
+            completion: { [weak self] _ in
+            UIView.animate(
+                withDuration: 0.25,
+                delay: 0.0,
+                usingSpringWithDamping: 0.5,
+                initialSpringVelocity: 0.5,
+                options: [],
+                animations: { [weak self] in
+                    self?.triggerView.transform = .identity
+                },
+                completion: nil)
+            })
+    }
+
+    private func animReverse() {
+        UIView.animate(
+            withDuration: 1.0,
+            delay: 0.0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 0.5,
+            options: [],
+            animations: { [weak self] in
+                self?.arcView.transform = .identity
+                self?.triggerView.backgroundColor = self?.view.backgroundColor
+                self?.triggerViewX.constant = 0.0
+                self?.view.layoutIfNeeded()
+            },
+            completion: nil)
+        UIView.animate(
+            withDuration: 0.25,
+            delay: 0.0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 0.5,
+            options: [],
+            animations: { [weak self] in
+                self?.triggerView.transform = CGAffineTransform(scaleX: 1.2, y: 1.0)
+            },
+            completion: { [weak self] _ in
+                UIView.animate(
+                    withDuration: 0.25,
+                    delay: 0.0,
+                    usingSpringWithDamping: 0.5,
+                    initialSpringVelocity: 0.5,
+                    options: [],
+                    animations: { [weak self] in
+                        self?.triggerView.transform = .identity
+                    },
+                    completion: nil)
+            })
     }
 
 }
