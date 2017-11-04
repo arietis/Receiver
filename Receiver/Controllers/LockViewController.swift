@@ -22,18 +22,18 @@ class LockViewController: UIViewController {
         super.loadView()
 
         let lockLayer = lockView.layer
-        lockLayer.borderColor = UIColor.white.cgColor
-        lockLayer.borderWidth = 2.0
+        lockLayer.borderColor = .lockBorderColor
+        lockLayer.borderWidth = Constants.lockBorderWidth
         lockLayer.cornerRadius = 10.0
 
         let holeLayer = holeView.layer
-        holeLayer.borderColor = UIColor.white.cgColor
-        holeLayer.borderWidth = 2.0
+        holeLayer.borderColor = .lockBorderColor
+        holeLayer.borderWidth = Constants.lockBorderWidth
         holeLayer.cornerRadius = 6.5
 
         let triggerLayer = triggerView.layer
-        triggerLayer.borderColor = UIColor.white.cgColor
-        triggerLayer.borderWidth = 2.0
+        triggerLayer.borderColor = .lockBorderColor
+        triggerLayer.borderWidth = Constants.lockBorderWidth
         triggerLayer.cornerRadius = 8.0
     }
 

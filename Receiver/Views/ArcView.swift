@@ -14,8 +14,8 @@ class ArcView: UIView {
 
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        context?.setLineWidth(2.0)
-        context?.setStrokeColor(UIColor.white.cgColor)
+        context?.setLineWidth(Constants.lockBorderWidth)
+        context?.setStrokeColor(.lockBorderColor)
 
         let bigRadius = CGFloat(39.5)
 

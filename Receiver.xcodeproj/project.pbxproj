@@ -19,6 +19,7 @@
 		033E07EE1FA9F5400057E489 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033E07ED1FA9F5400057E489 /* TabBarController.storyboard */; };
 		033E07F01FA9F5BB0057E489 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E07EF1FA9F5BB0057E489 /* TabBarController.swift */; };
 		033E07F31FAA20640057E489 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E07F21FAA20640057E489 /* ArcView.swift */; };
+		03558C4C1FAE114C00639D2C /* UIColor+Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03558C4B1FAE114C00639D2C /* UIColor+Receiver.swift */; };
 		039530911FA893A200821326 /* UIViewController+Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039530901FA893A200821326 /* UIViewController+Receiver.swift */; };
 		039530931FA89B1F00821326 /* UIStoryboard+Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039530921FA89B1F00821326 /* UIStoryboard+Receiver.swift */; };
 		039530951FA89BA200821326 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039530941FA89BA200821326 /* main.swift */; };
@@ -69,6 +70,7 @@
 		033E07ED1FA9F5400057E489 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		033E07EF1FA9F5BB0057E489 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		033E07F21FAA20640057E489 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
+		03558C4B1FAE114C00639D2C /* UIColor+Receiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Receiver.swift"; sourceTree = "<group>"; };
 		039530901FA893A200821326 /* UIViewController+Receiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Receiver.swift"; sourceTree = "<group>"; };
 		039530921FA89B1F00821326 /* UIStoryboard+Receiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Receiver.swift"; sourceTree = "<group>"; };
 		039530941FA89BA200821326 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		0395308F1FA8938C00821326 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				03558C4B1FAE114C00639D2C /* UIColor+Receiver.swift */,
 				039530921FA89B1F00821326 /* UIStoryboard+Receiver.swift */,
 				039530901FA893A200821326 /* UIViewController+Receiver.swift */,
 			);
@@ -569,6 +572,7 @@
 				033E07F31FAA20640057E489 /* ArcView.swift in Sources */,
 				039530951FA89BA200821326 /* main.swift in Sources */,
 				03CADC0F1FACE1FD00EC8F15 /* SplashViewController.swift in Sources */,
+				03558C4C1FAE114C00639D2C /* UIColor+Receiver.swift in Sources */,
 				039530931FA89B1F00821326 /* UIStoryboard+Receiver.swift in Sources */,
 				033E07F01FA9F5BB0057E489 /* TabBarController.swift in Sources */,
 				03264C871FA7D45400477444 /* AppDelegate.swift in Sources */,
