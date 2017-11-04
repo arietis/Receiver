@@ -27,7 +27,7 @@
 		0395309A1FA8B58F00821326 /* LockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039530991FA8B58F00821326 /* LockManager.swift */; };
 		0395309C1FA8B59900821326 /* LockSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395309B1FA8B59900821326 /* LockSpec.swift */; };
 		03CADC0F1FACE1FD00EC8F15 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CADC0E1FACE1FD00EC8F15 /* SplashViewController.swift */; };
-		03DCA41E1FA8BFB800E1334D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DCA41D1FA8BFB800E1334D /* ViewModel.swift */; };
+		03DCA41E1FA8BFB800E1334D /* LockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DCA41D1FA8BFB800E1334D /* LockViewModel.swift */; };
 		03DCA4201FA8C4E600E1334D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DCA41F1FA8C4E600E1334D /* Constants.swift */; };
 		0649232AB415FDC7C4162467 /* Pods_ReceiverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7C9C4309F5DB195956ADB5 /* Pods_ReceiverUITests.framework */; };
 		9E6E4E373DC892F40F709F06 /* Pods_Receiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA3EDB67AA5BA28B23E3783 /* Pods_Receiver.framework */; };
@@ -78,7 +78,7 @@
 		039530991FA8B58F00821326 /* LockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockManager.swift; sourceTree = "<group>"; };
 		0395309B1FA8B59900821326 /* LockSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockSpec.swift; sourceTree = "<group>"; };
 		03CADC0E1FACE1FD00EC8F15 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		03DCA41D1FA8BFB800E1334D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		03DCA41D1FA8BFB800E1334D /* LockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewModel.swift; sourceTree = "<group>"; };
 		03DCA41F1FA8C4E600E1334D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0442FF03779136AC5FB19D44 /* Pods-ReceiverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiverUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiverUITests/Pods-ReceiverUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0DDE86E6E55044A4B4DC22B7 /* Pods-ReceiverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiverUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiverUITests/Pods-ReceiverUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		03DCA41C1FA8BFAA00E1334D /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				03DCA41D1FA8BFB800E1334D /* ViewModel.swift */,
+				03DCA41D1FA8BFB800E1334D /* LockViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -579,7 +579,7 @@
 				030C11E51FAB8E0400CE09A1 /* ProfileViewController.swift in Sources */,
 				0395309A1FA8B58F00821326 /* LockManager.swift in Sources */,
 				039530911FA893A200821326 /* UIViewController+Receiver.swift in Sources */,
-				03DCA41E1FA8BFB800E1334D /* ViewModel.swift in Sources */,
+				03DCA41E1FA8BFB800E1334D /* LockViewModel.swift in Sources */,
 				03DCA4201FA8C4E600E1334D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

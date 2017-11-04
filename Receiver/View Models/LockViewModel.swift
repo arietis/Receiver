@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  LockViewModel.swift
 //  Receiver
 //
 //  Created by Sergei Guselnikov on 31/10/2017.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ViewModel {
+class LockViewModel {
     var isLockUnlocked: Bool {
         return lock.isUnlocked
     }

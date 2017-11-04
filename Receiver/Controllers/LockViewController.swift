@@ -14,7 +14,7 @@ class LockViewController: UIViewController {
     @IBOutlet weak var lockView: UIView!
     @IBOutlet weak var triggerView: UIView!
     @IBOutlet weak var triggerViewX: NSLayoutConstraint!
-    let viewModel = ViewModel()
+    let viewModel = LockViewModel()
 
     // MARK: View Controller
 
