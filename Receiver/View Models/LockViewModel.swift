@@ -12,7 +12,7 @@ class LockViewModel {
     var isLockUnlocked: Bool {
         return lock.isUnlocked
     }
-    let lock = LockManager()
+    private let lock = LockManager()
     var updateLockStatus: (() -> Void)? {
         didSet {
             lock.updateLockStatus = updateLockStatus
@@ -22,11 +22,11 @@ class LockViewModel {
     // MARK: Public Interface
 
     func startTrackingBeacons() {
-        lock.startRanging()
+        lock.startTrackingBeacons()
     }
 
     func stopTrackingBeacons() {
-        lock.stopRanging()
+        lock.stopTrackingBeacons()
     }
 
 }

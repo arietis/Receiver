@@ -17,14 +17,18 @@ class LockManager: NSObject {
             return nil
         }
 
-        let beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 0, minor: 0, identifier: Constants.beaconName)
+        let beaconRegion = CLBeaconRegion(
+            proximityUUID: uuid,
+            major: Constants.beaconMajor,
+            minor: Constants.beaconMinor,
+            identifier: Constants.beaconName)
         beaconRegion.notifyOnEntry = true
         beaconRegion.notifyOnExit = true
 
         return beaconRegion
     }
     let locationManager = CLLocationManager()
-    private(set) var lockBeacon: CLBeacon?
+    private var lockBeacon: CLBeacon?
     private(set) var isUnlocked = false {
         didSet {
             guard isUnlocked != oldValue else { return }
@@ -34,7 +38,7 @@ class LockManager: NSObject {
             }
         }
     }
-    private(set) var timer: DispatchSourceTimer?
+    private var timer: DispatchSourceTimer?
     var updateLockStatus: (() -> Void)?
 
     // MARK: Public Interface
@@ -45,7 +49,7 @@ class LockManager: NSObject {
         self.setup()
     }
 
-    func startRanging() {
+    func startTrackingBeacons() {
         guard let info = beaconInfo else {
             print("Could not start/stop ranging of CLBeaconRegion because of missing beacon info.")
 
@@ -57,7 +61,7 @@ class LockManager: NSObject {
         scheduleNetworkRequest()
     }
 
-    func stopRanging() {
+    func stopTrackingBeacons() {
         timer?.cancel()
         timer = nil
         lockBeacon = nil
@@ -74,7 +78,10 @@ class LockManager: NSObject {
             return
         }
 
-        let request = NSMutableURLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        let request = NSMutableURLRequest(
+            url: url,
+            cachePolicy: .useProtocolCachePolicy,
+            timeoutInterval: Constants.requestTimeout)
         request.allHTTPHeaderFields = [ "authorization": Constants.authToken ]
         request.httpMethod = "POST"
 
@@ -89,7 +96,6 @@ class LockManager: NSObject {
 
             self?.processResponseData(data)
         })
-
         dataTask.resume()
     }
 
@@ -119,7 +125,7 @@ class LockManager: NSObject {
 
     private func scheduleNetworkRequest() {
         timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.global(qos: .`default`))
-        timer?.schedule(deadline: .now(), repeating: .seconds(4))
+        timer?.schedule(deadline: .now(), repeating: .seconds(Constants.unlockInterval))
         timer?.setEventHandler(handler: { [weak self] in
             self?.isUnlocked = false
             self?.accessLock()
